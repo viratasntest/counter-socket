@@ -11,7 +11,7 @@ const corsOpts = {
 
 app.use(cors(corsOpts));
 
-app.post("/", function (req, res) {
+app.get("/", function (req, res) {
   res.send("Welcome");
 });
 
@@ -22,6 +22,6 @@ io.on("connection", function (socket) {
   });
 });
 
-http.listen(8080, function () {
-  console.log("listening on *:8080");
+http.listen(3000, function () {
+  console.log("listening on 3000");
 });
